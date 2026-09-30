@@ -18,7 +18,7 @@ O pacote completo com a estrutura original, código, testes e documentação est
 - Histórico opcional em SQLite.
 - Provedor semântico remoto opcional; o funcionamento básico usa o interpretador local.
 
-O NESK ainda está em desenvolvimento. Nesta versão, ele responde por texto; síntese de voz, palavra de ativação e escuta contínua ainda não estão disponíveis. Veja [limitações conhecidas](docs/KNOWN_LIMITATIONS.md).
+O NESK ainda está em desenvolvimento. Nesta versão, ele responde por texto; síntese de voz, palavra de ativação e escuta contínua ainda não estão disponíveis. As limitações conhecidas estão detalhadas em `docs/KNOWN_LIMITATIONS.md` dentro do pacote de código.
 
 ## Requisitos
 
@@ -27,9 +27,9 @@ O NESK ainda está em desenvolvimento. Nesta versão, ele responde por texto; s�
 
 ## Instalação no Windows
 
-1. Instale uma versão compatível do Python e habilite o launcher `py`.
-2. Baixe ou clone este repositório.
-3. Execute `scripts/setup_windows.bat`.
+1. Baixe o arquivo [`nesk-source-0.2.0.5.2.zip`](nesk-source-0.2.0.5.2.zip) e extraia o conteúdo para uma pasta.
+2. Instale uma versão compatível do Python e habilite o launcher `py`.
+3. Dentro da pasta extraída, execute `scripts/setup_windows.bat`.
 4. Depois da instalação, execute `scripts/run_nesk.bat`.
 
 A primeira utilização da transcrição local pode baixar um modelo e exigir internet. A instalação completa de áudio/voz pode depender dos componentes disponíveis no Windows.
@@ -40,7 +40,7 @@ A primeira utilização da transcrição local pode baixar um modelo e exigir in
 python -m venv .venv
 ```
 
-Ative o ambiente virtual e instale o projeto com as dependências desejadas:
+Para executar os comandos seguintes, entre na pasta extraída do código-fonte. Ative o ambiente virtual e instale o projeto com as dependências desejadas:
 
 ```bash
 python -m pip install -e ".[dev]"
@@ -70,7 +70,7 @@ python scripts/smoke_test.py
 
 ## Segurança e privacidade
 
-As ações passam pelo núcleo do NESK, ferramentas registradas e política de permissões. O interpretador semântico não executa ferramentas diretamente. O histórico SQLite é opcional e local. Consulte [arquitetura](docs/ARCHITECTURE.md) e [política de privacidade](PRIVACY.md) para detalhes.
+As ações passam pelo núcleo do NESK, ferramentas registradas e política de permissões. O interpretador semântico não executa ferramentas diretamente. O histórico SQLite é opcional e local. Consulte `docs/ARCHITECTURE.md` e `PRIVACY.md` dentro do pacote para detalhes.
 
 ## Licença
 
